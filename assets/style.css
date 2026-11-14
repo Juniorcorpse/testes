@@ -195,6 +195,27 @@ button {
     color: var(--color-muted);
 }
 
+/* estilos para o alerta init */
+.alert{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: none;
+    width: 400px;
+    max-width: calc(100vw - 40px);
+    min-height: 45px;   
+    background-color: var(--color-danger);
+    color: var(--color-text);
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.display {
+    display: flex;
+}
+
+/* estilos para o alerta fim */
+
 @media (max-width: 480px) {
     body {
         padding: 32px 16px;

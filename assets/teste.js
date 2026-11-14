@@ -115,6 +115,16 @@ form.addEventListener('submit', (event) => {
         taskInput.classList.add('error');
         taskInput.setAttribute('aria-invalid', 'true');
         message.textContent = 'Digite uma tarefa antes de adicionar.';
+        window.alertmsg.show('Digite uma tarefa antes de adicionar.');
+        taskInput.focus();
+        return;
+    }
+
+    if (text.length < 2) {
+        taskInput.classList.add('error');
+        taskInput.setAttribute('aria-invalid', 'true');
+        message.textContent = 'A tarefa deve ter pelo menos 2 caracteres.';
+        window.alertmsg.show('A tarefa deve ter pelo menos 2 caracteres.');
         taskInput.focus();
         return;
     }
@@ -123,6 +133,7 @@ form.addEventListener('submit', (event) => {
         taskInput.classList.add('error');
         taskInput.setAttribute('aria-invalid', 'true');
         message.textContent = 'Essa tarefa já foi adicionada.';
+        window.alertmsg.show('Essa tarefa já foi adicionada.');
         taskInput.focus();
         return;
     }
